@@ -6,3 +6,7 @@
 - git commit -m "tạo ra trang home" : xác nhận và ghi description
 - git push -u origin master (chỉ lần đầu)
 - git push : (lần 2 trở đi)
+
+- branch : nhánh
+- git checkout -b login : tạo ra nhánh login từ nhánh hiện tại
+- git branch : list ra các nhánh hiện có
