@@ -1,0 +1,8 @@
+- git init: khởi tạo repo local
+- git remote add origin https://github.com/vohaiphuc/demo_git.git : liên kết repo local vs repo remote
+
++ đẩy code từ local lên remote: 
+- git add -A : chọn
+- git commit -m "tạo ra trang home" : xác nhận và ghi description
+- git push -u origin master (chỉ lần đầu)
+- git push : (lần 2 trở đi)
