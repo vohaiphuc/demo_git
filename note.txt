@@ -17,3 +17,5 @@
 - git pull: lấy code mới nhất từ remote
 
 - git log : xem danh sách các lệnh đã commit
+
+- git stash : khôi phục code về lần commit gần nhất
