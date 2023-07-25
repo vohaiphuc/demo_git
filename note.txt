@@ -11,3 +11,74 @@
 - git checkout -b login : tạo ra nhánh login từ nhánh hiện tại
 - git branch : list ra các nhánh hiện có
 - git merge login : đưa code từ nhánh login về nhánh hiện tại
+
++ Lấy source từ 1 repo
+- git clone url . : clone source vào folder hiện tại. Nếu ko có dấu "." ở cuối sẽ tạo ra 1 folder trung gian chứa clone source (repo sẽ nằm bên trong folder trung gian)
+- git pull: lấy code mới nhất từ remote
+
+- git log : xem danh sách các lệnh đã commit
+
+- git stash : khôi phục code về lần commit gần nhất
+
+---------------------------------------------------
+
+Để chuyển code từ nhánh của mình -> nhánh main
+1. Chuyển sang nhánh-của-mình
+"git checkout nhánh-của-mình"
+
+2. Push nhánh của mình
+"git add -A"
+"git commit -m ..."
+"git push origin nhánh-của-mình"
+
+3. Chuyển sang nhánh main
+"git checkout main"
+
+4. Đưa code từ nhánh-của-mình -> main
+"git merge nhánh-của-mình"
+note: trong cú pháp "git merge branch", nếu branch là nhánh B thì lệnh này sẽ đưa code từ B -> A, với A là nhánh mình đang đứng
+
+5. Xử lí conflict (nếu có): 
+Vào file bị conflict, scroll lên đầu những đoạn code bị đánh dấu sẽ thấy các lựa chọn sau:
+Accept:
+- Current change: chỉ lấy code của mình
+- Incoming change: chỉ lấy code mới
+- Both change: lấy cả 2 => banh
+
+6. Push nhánh main
+"git add -A"
+"git commit -m ..."
+"git push"
+
+Xong.
+
+---------------------------------------------------
+
+Để đưa code từ nhánh main -> nhánh-của-mình
+1. Chuyển sang nhánh main
+"git checkout main"
+
+2. Update code mới nhất
+"git pull"
+
+3. Xử lí conflict: 
+Vào file bị conflict, scroll lên đầu những đoạn code bị đánh dấu sẽ thấy các lựa chọn sau:
+Accept:
+- Current change: chỉ lấy code của mình
+- Incoming change: chỉ lấy code mới
+- Both change: lấy cả 2 => banh
+
+4. Chuyển sang nhánh-của-mình
+"git checkout nhánh-của-mình"
+
+5. Đưa code từ main -> nhánh-của-mình
+"git merge main"
+
+6. Xử lí conflict (nếu có): 
+Vào file bị conflict, scroll lên đầu những đoạn code bị đánh dấu sẽ thấy các lựa chọn sau:
+Accept:
+- Current change: chỉ lấy code của mình
+- Incoming change: chỉ lấy code mới
+- Both change: lấy cả 2 => banh
+
+[Warning!] Để code tiếp từ nhánh main, tốt nhất nên tạo nhánh mới
